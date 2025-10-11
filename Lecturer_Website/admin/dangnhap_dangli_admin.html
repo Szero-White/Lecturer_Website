@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập và Đăng Kí Admin</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS cho việc đặt hình ảnh đúng tỉ lệ và khung đăng nhập và đăng kí */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-register-container {
+            width: 60%; /* Thay đổi kích thước khung đăng nhập và đăng kí */
+            padding: 20px;
+            border: 1px solid #ccc;
+            /* border-radius: 20px; */
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+            background-color: white;
+        }
+
+        .login-register-container h3 {
+            text-align: center;
+        }
+
+        .login-register-form {
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+        .login-register-container {
+        width: 70%; 
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        background-color: white;
+    }
+
+    .image-container img {
+    
+        width: 50%; 
+        margin-bottom: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="login-register-container">
+        <div class="image-container">
+            <img src="../anh/tonducthang.png" alt="Avatar" width="150">
+        </div>
+        <div class="login-register-form">
+            <div id="loginForm">
+                <h3>Đăng Nhập Admin</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="loginUsername" class="form-label">Tên đăng nhập:</label>
+                        <input type="text" class="form-control" id="loginUsername">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="loginPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                </form>
+                <p>Chưa có tài khoản? <a href="#" onclick="showRegisterForm()">Đăng Kí</a></p>
+            </div>
+
+            <div id="registerForm" style="display: none;">
+                <h3>Đăng Kí Admin</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="registerUsername" class="form-label">Tên đăng nhập:</label>
+                        <input type="text" class="form-control" id="registerUsername">
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="registerPassword">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Xác nhận mật khẩu:</label>
+                        <input type="password" class="form-control" id="confirmPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng Kí</button>
+                </form>
+                <p>Đã có tài khoản? <a href="#" onclick="showLoginForm()">Đăng Nhập</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showRegisterForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('registerForm').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

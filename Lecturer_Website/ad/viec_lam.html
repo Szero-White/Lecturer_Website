@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Nhập Thông Tin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img style="width: 7%; border-radius: 12px;" src="../anh/tonducthang.png" alt="">
+          <!-- <a style="width: 10px;" class="navbar-brand"> </a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div style="padding-left: 33rem; font-size: 18px;" class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;" class="nav-link active" aria-current="page" href="danhmuc.html" onclick="loadPage('danhmuc.html')">Quản lí danh mục</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="tai_lieu.html" onclick="loadPage('tai_lieu.html')">Quản lí tài liệu</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="viec_lam.html" onclick="loadPage('viec_lam.html')">Quản lí việc làm</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qltintuc.html" onclick="loadPage('qltintuc.html')">Quản lí tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qlsk.html" onclick="loadPage('qlsk.html')">Quản lí sk</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qldiemdanh.html" onclick="loadPage('qldiemdanh.html')">Quản lí điểm danh</a>
+              </li>
+              <form style="padding-left: 20px;" class="d-flex">
+                <input style="padding-right: 20px;font-size: 10px;" class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+                <button style="font-size: 10px;" class="btn btn-outline-success" type="submit">Đăng Xuất</button>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <h2>Nhập Thông Tin Việc Làm</h2>
+        <form id="notificationForm">
+            <div class="mb-3">
+                <label for="notificationId" class="form-label">ID:</label>
+                <input type="text" class="form-control" id="notificationId" required>
+            </div>
+            <div class="mb-3">
+                <label for="notificationImage" class="form-label">Hình Ảnh:</label>
+                <input type="file" class="form-control" id="notificationImage" accept="image/*" required>
+            </div>
+            <div class="mb-3">
+                <label for="notificationName" class="form-label">Tên Thông Báo:</label>
+                <input type="text" class="form-control" id="notificationName" required>
+            </div>
+            <div class="mb-3">
+                <label for="notificationSummary" class="form-label">Tóm Tắt:</label>
+                <input type="text" class="form-control" id="notificationSummary" required>
+            </div>
+            <button type="submit" class="btn btn-light">Thêm Thông báo</button>
+        </form>
+    <div class="container mt-5">
+        <h2>Bảng Quản lý Thông Tin Việc Làm</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Hình Ảnh</th>
+                    <th scope="col">Tên Thông báo</th>
+                    <th scope="col">Tóm Tắt</th>
+                    <th scope="col">Quản lý</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../anh/logo.jpg" alt="Notification 1" style="width: 100px;"></td>
+                    <td>TGDD thông báo tuyển dụng nhân sự</td>
+                    <td>Vị trí tuyển dụng: dành cho sinh viên năm 4 Java (Spring boot): 5; React JS: 3; Flutter/Dark: 4; Swift: 2; Kotlin: 1; Software testers: 5; Business Analyst: 1;
+                    </td>
+                    <td class="text-center">
+                      <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                      <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                  </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="../anh/OIP (1).jpg" alt="Notification 2" style="width: 100px;"></td>
+                    <td>Cty Netlogic tuyển dụng</td>
+                    <td>Thực tập sinh: Web Developer (ReactJS, Vite, Web API) và Business Analyst Có định hướng phát triển lâu dài với công ty</td>
+                    <td class="text-center">
+                      <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                      <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                  </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="../anh/flog.co_.id__1.jpg" alt="Notification 3" style="width: 100px;"></td>
+                    <td>Thực tập sinh công ty FLOG</td>
+                    <td>- Số lượng: 10. Chuyên môn: Web, C++, Tester</td>
+                    <td class="text-center">
+                      <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                      <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                  </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><img src="../anh/logo-fpt.jpg" alt="Notification 3" style="width: 100px;"></td>
+                    <td>FPT Software tuyển dụng Fresher.Net</td>
+                    <td>- Lương từ: 8.000.000 VNĐ – 15.000.000 VNĐ/tháng. Nắm vững kiến thức lập trình cơ bản về ngôn ngữ C #, .Net, MVC, ASP.NET Core, ASP.NET API,...</td>
+                    <td class="text-center">
+                      <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                      <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><img src="../anh/logo.jpg" alt="Notification 1" style="width: 100px;"></td>
+                  <td>TGDD thông báo tuyển dụng nhân sự</td>
+                  <td>Vị trí tuyển dụng: dành cho sinh viên năm 4 Java (Spring boot): 5; React JS: 3; Flutter/Dark: 4; Swift: 2; Kotlin: 1; Software testers: 5; Business Analyst: 1;
+                  </td>
+                  <td class="text-center">
+                    <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                    <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td><img src="../anh/OIP (1).jpg" alt="Notification 2" style="width: 100px;"></td>
+                  <td>Cty Netlogic tuyển dụng</td>
+                  <td>Thực tập sinh: Web Developer (ReactJS, Vite, Web API) và Business Analyst Có định hướng phát triển lâu dài với công ty</td>
+                  <td class="text-center">
+                    <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                    <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Nhập Thông Tin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img style="width: 7%; border-radius: 12px;" src="../anh/tonducthang.png" alt="">
+          <!-- <a style="width: 10px;" class="navbar-brand"> </a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div style="padding-left: 33rem; font-size: 18px;" class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;" class="nav-link active" aria-current="page" href="danhmuc.html" onclick="loadPage('danhmuc.html')">Quản lí danh mục</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="tai_lieu.html" onclick="loadPage('tai_lieu.html')">Quản lí tài liệu</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="viec_lam.html" onclick="loadPage('viec_lam.html')">Quản lí việc làm</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qltintuc.html" onclick="loadPage('qltintuc.html')">Quản lí tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qlsk.html" onclick="loadPage('qlsk.html')">Quản lí sk</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qldiemdanh.html" onclick="loadPage('qldiemdanh.html')">Quản lí điểm danh</a>
+              </li>
+              <form style="padding-left: 20px;" class="d-flex">
+                <input style="padding-right: 20px;font-size: 10px;" class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+                <button style="font-size: 10px;" class="btn btn-outline-success" type="submit">Đăng Xuất</button>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Nhập Dữ Liệu</h5>
+                <form id="dataForm">
+                    <div class="mb-3">
+                        <label for="newsTitle" class="form-label">Tiêu đề:</label>
+                        <input type="text" class="form-control" id="newsTitle" value="" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newsDate" class="form-label">Ngày:</label>
+                        <input type="text" class="form-control" id="newsDate" value="" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newsContent" class="form-label">Nội dung:</label>
+                        <textarea class="form-control" id="newsContent" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newsImage" class="form-label">Hình ảnh:</label>
+                        <input type="file" class="form-control" id="newsImage" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-light text-dark">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 20px;" class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Bảng Kiểm Tra</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Nội Dung</th>
+                            <th scope="col">Ngày Đăng</th>
+                            <th scope="col">Hình Ảnh</th>
+                            <th scope="col">Tác Vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checkData">
+                        <!-- Dữ liệu kiểm tra sẽ được thêm vào đây -->
+                        <tr>
+                            <td>TDTU JOINT TRAINING PROGRAM</td>
+                            <td>Ngày 16/3/2024, tại sân vận động Trường Đại học Tôn Đức Thắng (TDTU), đã diễn ra Lễ khai mạc Vòng Chung kết Giải Bóng đá Thanh niên Sinh viên Việt Nam lần 2 năm 2024 - Cúp THACO.</td>
+                            <td>16/03/2024</td>
+                            <td class="text-center"><img src="../anh/da.jpg" alt="Hình ảnh 1" style="max-width: 100px;"></td>
+                            <td class="text-center">
+                                <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                                <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TDTU JOINT TRAINING PROGRAM</td>
+                            <td>Chế độ đãi ngộ đặc biệt dành cho người có học hàm giáo sư, phó giáo sư, người có trình độ tiến sĩ được tuyển dụng làm công tác giảng dạy, nghiên cứu, quản lý tại Đại học Tôn Đức Thắng…</td>
+                            <td>18/03/2024</td>
+                            <td class="text-center"><img src="../anh/nhansu.jpg" alt="Hình ảnh 2" style="max-width: 100px;"></td>
+                            <td class="text-center">
+                                <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                                <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TDTU JOINT TRAINING PROGRAM</td>
+                            <td>Trường Đại học Tôn Đức Thắng thông báo về học bổng học phí 2024...</td>
+                            <td>22/04/2024</td>
+                            <td class="text-center"><img src="../anh/hocbong.jpg" alt="Hình ảnh 3" style="max-width: 100px;"></td>
+                            <td class="text-center">
+                                <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                                <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    

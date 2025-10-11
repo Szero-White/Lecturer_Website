@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Nhập Thông Tin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img style="width: 7%; border-radius: 12px;" src="../anh/tonducthang.png" alt="">
+          <!-- <a style="width: 10px;" class="navbar-brand"> </a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div style="padding-left: 33rem; font-size: 18px;" class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;" class="nav-link active" aria-current="page" href="danhmuc.html" onclick="loadPage('danhmuc.html')">Quản lí danh mục</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="tai_lieu.html" onclick="loadPage('tai_lieu.html')">Quản lí tài liệu</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="viec_lam.html" onclick="loadPage('viec_lam.html')">Quản lí việc làm</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qltintuc.html" onclick="loadPage('qltintuc.html')">Quản lí tin tức</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qlsk.html" onclick="loadPage('qlsk.html')">Quản lí sk</a>
+              </li>
+              <li class="nav-item">
+                <a style="padding-right: 20px;font-size: 10px;color: black;" class="nav-link" href="qldiemdanh.html" onclick="loadPage('qldiemdanh.html')">Quản lí điểm danh</a>
+              </li>
+              <form style="padding-left: 20px;" class="d-flex">
+                <input style="padding-right: 20px;font-size: 10px;" class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+                <button style="font-size: 10px;" class="btn btn-outline-success" type="submit">Đăng Xuất</button>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nhập thông tin</h5>
+                        <form id="dataForm">
+                            <div class="mb-3">
+                                <label for="id_hoat_dong" class="form-label">ID:</label>
+                                <input type="text" class="form-control" id="id_hoat_dong" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Tên tiêu đề:</label>
+                                <input type="text" class="form-control" id="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="content" class="form-label">Nội dung:</label>
+                                <textarea class="form-control" id="content" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Hình ảnh:</label>
+                                <input type="file" class="form-control" id="image" accept="image/*" required>
+                            </div>
+                            <button type="submit" class="btn btn-light text-dark">Gửi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bảng Kiểm Tra</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Thông Tin</th>
+                                    <th scope="col">Giá Trị</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ID</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Tên tiêu đề</td>
+                                    <td>Nơi thầy đang giảng dạy: Trường Đại học Tôn Đức Thắng</td>
+                                </tr>
+                                <tr>
+                                    <td>Nội dung</td>
+                                    <td>Trường Đại học Tôn Đức Thắng (TDTU) là một trường đại học công lập của Việt Nam. Trường trực thuộc Tổng Liên đoàn Lao động Việt Nam.Trường hoạt động theo cơ chế tự chủ toàn diện. Trường hiện có tổng cộng năm cơ sở tại bốn thành phố khác nhau gồm TP. Hồ Chí Minh, Nha Trang, Bảo Lộc và Cà Mau.</p>
+                                    <td>Tiền thân của Trường Đại học Tôn Đức Thắng là Trường Đại học Công nghệ Dân lập Tôn Đức Thắng, được thành lập theo quyết định 787/TTg-QĐ ngày 24 tháng 9 năm 1997 của Thủ tướng Chính phủ. Trường do Liên đoàn lao động Thành phố Hồ Chí Minh sáng lập, đầu tư và lãnh đạo trực tiếp thông qua Hội đồng quản trị nhà trường do Chủ tịch Liên đoàn Lao động Thành phố đương nhiệm qua các thời kỳ là Chủ tịch.</td>
+                                </tr>
+                                <tr>
+                                    <td>Hình ảnh</td>
+                                    <td><img src="../anh/Lịch sử hình thành.jpg" style="width: 100px; height: 100px;"></td>
+                                </tr>
+                                <td> <!-- Ô mới cho các hành động -->
+                                    <button onclick="editRow(this)" class="btn btn-light text-dark">Chỉnh sửa</button>
+                                    <button onclick="deleteRow(this)" class="btn btn-light text-dark">Xóa</button>
+                                </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+    
+    
+    
+    
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var idHoatDong = document.getElementById("id_hoat_dong").value;
+            var message = document.getElementById("message").value;
+            var image = document.getElementById("image").files[0];
+    
+            var displayDiv = document.getElementById("displayInfo");
+    
+            // Hiển thị thông tin văn bản
+            displayDiv.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Thông Tin Nhập</h5>
+                        <p><strong>ID Hoạt Động:</strong> ${idHoatDong}</p>
+                        <p><strong>Nội dung:</strong> ${message}</p>
+                    </div>
+                </div>
+            `;
+    
+            // Thêm dữ liệu vào bảng kiểm tra
+            var dataTable = document.getElementById("dataTable");
+            var newRow = dataTable.insertRow();
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.innerHTML = idHoatDong;
+            cell2.innerHTML = `<div style="width: 100px; height: 100px; background-color: lightgray;"></div>`; // Thay vì image, sử dụng div vuông
+            cell3.innerHTML = message;
+        });
+    </script>
+    
+</body>
+</html>
