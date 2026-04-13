@@ -95,7 +95,7 @@ Lecturer_Website/
 - 📨 Email phản hồi/báo lỗi: dzoanxuanthanh@tdtu.edu.vn
 - 📬 Facebook: [Doãn Xuân Thanh](https://www.facebook.com/gnol24112k/)
 - 🌐 Instagram: [xuanthanh_tdtu](https://www.instagram.com/__thanhlong_2411/)
-- 💼 GitHub cá nhân: [thanhlong2411](https://github.com/thanhlong2411/)
+- 💼 GitHub cá nhân: [Szero-White](https://github.com/Szero-White)
 
 <br/>
 
